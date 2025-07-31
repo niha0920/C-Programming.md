@@ -30,3 +30,20 @@ int main()
     }
 }
 ```
+
+## Program that calculates sum of numerics in a string
+```C
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+    char str[20] = "string2025";
+    int sum = 0;
+    for(int i = 0; str[i] != '\0'; i++)
+    {
+        if(isdigit(str[i]))
+         sum += str[i] - '0';
+    }
+    printf("Sum of numerics in a string is %d", sum);
+}
+```
