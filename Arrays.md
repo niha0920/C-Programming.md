@@ -1,5 +1,5 @@
 ## Program to find the missing element in an array
-'''C
+```C
 #include<stdio.h>
 int main()
 {
@@ -21,4 +21,4 @@ int main()
     }
     printf("Missing number is %d", sumofn - sum);
 }
-'''
+```
