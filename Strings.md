@@ -1,4 +1,4 @@
-## program to count the number of substrings and print them
+## program that count the number of substrings and print them
 ```C
 #include<stdio.h>
 #include<string.h>
@@ -37,7 +37,9 @@ int main()
 #include<ctype.h>
 int main()
 {
-    char str[20] = "string2025";
+    char str[20];
+    printf("Enter the string : ");
+    scanf("%s", str);
     int sum = 0;
     for(int i = 0; str[i] != '\0'; i++)
     {
@@ -45,5 +47,25 @@ int main()
          sum += str[i] - '0';
     }
     printf("Sum of numerics in a string is %d", sum);
+}
+```
+
+## program that count the number of vowels in a string
+```C
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+    char str[10];
+    printf("Enter a string : ");
+    scanf("%s", str);
+    int count = 0;
+    for(int i = 0; str[i] != '\0'; i++)
+    {
+        char ch = tolower(str[i]);
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+         count++;
+    }
+    printf("Number of vowels in string are %d", count);
 }
 ```
