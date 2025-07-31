@@ -1,6 +1,5 @@
 ## program to count the number of substrings and print them
-```
-c
+```C
 #include<stdio.h>
 #include<string.h>
 int main()
