@@ -1,5 +1,5 @@
 ## Program to find the missing element in an array
-```C
+```c
 #include<stdio.h>
 int main()
 {
