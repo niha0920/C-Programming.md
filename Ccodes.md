@@ -1,4 +1,4 @@
-## Program to accept two integers and check whether they are equal or not
+## 1. Program to accept two integers and check whether they are equal or not
 ```c
 #include<stdio.h>
 int main()
@@ -13,7 +13,7 @@ int main()
 }
 ```
 
-##  Program to check whether a given number is even or odd?
+##  2. Program to check whether a given number is even or odd?
 ```c
 #include<stdio.h>
 int main()
@@ -28,7 +28,7 @@ int main()
 }
 ```
 
-## Program to check whether a given number is positive or negative?
+## 3. Program to check whether a given number is positive or negative?
 ```c
 #include<stdio.h>
 int main()
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-## Program to find whether a given year is a leap year or not?
+## 4. Program to find whether a given year is a leap year or not?
 ```c
 #include<stdio.h>
 int main()
@@ -57,7 +57,7 @@ int main()
 }
 ```
 
-## Program to read the age of a candidate and determine whether he is eligible to cast his/her own vote
+## 5. Program to read the age of a candidate and determine whether he is eligible to cast his/her own vote
 ```c
 #include<stdio.h>
 int main()
@@ -69,5 +69,21 @@ int main()
   printf("He/She is eligible to cast his/her own Vote");
  else 
   printf("He/She is not eligible to cast his/her own Vote");
+}
+```
+
+## 6. Program to read the value of an integer m and display the value of n is 1 when m is larger than 0, 0 when m is 0 and -1 when m is less than 0
+```c
+#include<stdio.h>
+int main()
+{
+ int m, n;
+ printf("Enter value of m : ");
+ scanf("%d", &m);
+ if(m > 0)
+  n = 1;
+ else 
+  n = 0;
+ printf("Value of n is %d", n);
 }
 ```
