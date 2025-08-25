@@ -56,3 +56,18 @@ int main()
   printf("%d is not a Leap year",year);
 }
 ```
+
+## Program to read the age of a candidate and determine whether he is eligible to cast his/her own vote
+```c
+#include<stdio.h>
+int main()
+{
+ int age;
+ printf("Enter age : ");
+ scanf("%d", &age);
+ if(age >= 18)
+  printf("He/She is eligible to cast his/her own Vote");
+ else 
+  printf("He/She is not eligible to cast his/her own Vote");
+}
+```
