@@ -36,10 +36,12 @@ int main()
  int num;
  printf("Enter a number : ");
  scanf("%d", &num);
- if(num >= 0)
+ if(num > 0)
   printf("Number is Positive");
- else
+ else if(num < 0)
   printf("Number is Negative");
+ else
+  printf("Number is Zero");
 }
 ```
 
@@ -82,8 +84,10 @@ int main()
  scanf("%d", &m);
  if(m > 0)
   n = 1;
- else 
+ else if(m == 0)
   n = 0;
+ else
+  n = -1;
  printf("Value of n is %d", n);
 }
 ```
@@ -96,9 +100,9 @@ int main()
  int a, b, c;
  printf("Enter three numbers : ");
  scanf("%d %d %d", &a, &b, &c);
- if(a > b && a > c)
+ if(a >= b && a >= c)
   printf("a is the largest number");
- else if(b > a && b > c)
+ else if(b >= a && b >= c)
   printf("b is the largest number");
  else 
   printf("c is the largest number");
