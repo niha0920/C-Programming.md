@@ -1,5 +1,5 @@
 ## Program to accept two integers and check whether they are equal or not
-` ` `C
+```c
 #include<stdio.h>
 int main()
 {
@@ -10,4 +10,4 @@ int main()
  else
   printf("a and b are not equal");
 }
-` ` `
+```
