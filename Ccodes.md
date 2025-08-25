@@ -108,3 +108,27 @@ int main()
   printf("c is the largest number");
 }
 ```
+
+## 8. Program to check whether a character is an alphabet or not?
+```c
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+ char ch;
+ printf("Enter a Character");
+ scanf("%c", &ch);
+ char fch = tolower(ch);
+ if(fch >= 'a' && fch <= 'z')
+ {
+  if(fch == 'a' || fch == 'e' || fch == 'i' || fch == 'o' || fch == 'u')
+   printf("Character is Vowel");
+  else 
+   printf("Character is Constant");
+ }
+ else
+ {
+  printf("Character is not an Alphabet");
+ }
+}
+```
