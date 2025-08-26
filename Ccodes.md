@@ -1,3 +1,4 @@
+## CONTROL STATEMENTS
 ## 1. Program to accept two integers and check whether they are equal or not
 ```c
 #include<stdio.h>
@@ -499,5 +500,25 @@ int main()
   i++;
  }
  printf("Sum of elements in an array : %d", sum);
+}
+```
+
+## 26. 
+```c
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+ char str[10];
+ printf("Enter a string : ");
+ scanf("%s", str);
+ int count = 0;
+ for(int i = 0; str[i] != '\0'; i++)
+ {
+  char ch = tolower(str[i]); 
+  if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+   count++;
+  }
+  printf("Number of vowels in %s are %d", str, count);
 }
 ```
