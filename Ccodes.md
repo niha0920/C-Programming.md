@@ -109,7 +109,30 @@ int main()
 }
 ```
 
-## 8. Program to check whether a character is an alphabet or not?
+## 8. Program to check whether a character is a vowel or consonant?
+```c
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+ char ch;
+ scanf("%c", &ch);
+ char fch = tolower(ch);
+ if(fch >= 'a' && fch <= 'z')
+ {
+  if(fch == 'a' || fch == 'e' || fch == 'i' || fch == 'o' || fch == 'u')
+   printf("Character is Vowel");
+  else 
+   printf("Character is Constant");
+ }
+ else
+ {
+  printf("Character is not an Alphabet");
+ }
+}
+```
+
+## 9. Program to check whether a character is an alphabet or not?
 ```c
 #include<stdio.h>
 #include<ctype.h>
@@ -130,5 +153,27 @@ int main()
  {
   printf("Character is not an Alphabet");
  }
+}
+```
+
+## 10. Program to find minimum or maximum between two numbers?
+```c
+#include<stdio.h>
+int main()
+{
+ int a, b, min, max;
+ printf("Enter two numbers : ");
+ scanf("%d %d", &a, &b);
+ if(a > b)
+ {
+  min = b;
+  max = a;
+ }
+ else
+ {
+  min = a;
+  max = b;
+ }
+ printf("Minimum : %d, Maximum : %d", min, max);
 }
 ```
