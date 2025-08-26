@@ -183,10 +183,10 @@ int main()
 #include<stdio.h>
 int main()
 {
- int num;
+ int week;
  printf("Enter week number : ");
- scanf("%d", &num);
- switch(num)
+ scanf("%d", &week);
+ switch(week)
  {
   case 1 : printf("Sunday");
            break;
@@ -221,5 +221,35 @@ int main()
   printf("Character is in Lowercase"); 
  else
   printf("Character is not an alphabet");
+}
+```
+
+## 13. Program to find number of days in month?
+```c
+#include<stdio.h>
+int main()
+{
+ int month;
+ printf("Enter month number : ");
+ scanf("%d", &month);
+ switch(month)
+ {
+  case 1 : 
+  case 3 :
+  case 5 : 
+  case 7 : 
+  case 8 : 
+  case 10 : 
+  case 12 : printf("31 Days");
+           break;
+  case 2 : printf("28 or 29 Days");
+           break;
+  case 4 : 
+  case 6 : 
+  case 9 :
+  case 11 : printf("30 Days");
+           break;
+  default : printf("Invalid Input");
+ }
 }
 ```
