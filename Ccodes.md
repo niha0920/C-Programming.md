@@ -387,3 +387,117 @@ int main()
  }
 }
 ```
+
+## 21. Program to reverse a given number using a while loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int num, rev = 0;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ int n = num;
+ while(n > 0)
+ {
+  int rem = n % 10;
+  rev = rev * 10 + rem;
+  n = n / 10;
+ } 
+ printf("Reverse of %d is %d", num, rev);
+}
+```
+
+## 22. Program to find the largest element in an array using a for loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of an array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter the elements of an array : ");
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int max = arr[0];
+ for(int i = 0; i < n; i++)
+ {
+  if(arr[i] > max)
+   max = arr[i];
+ }
+ printf("Largest element in an array is : %d", max);
+}
+```
+
+## 23. Program to find the smallest element in an array using a while loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter the size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter elements of an array : ");
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int i = 0, min = arr[0];
+ while(i < n)
+ {
+  if(arr[i] < min)
+   min = arr[i];
+  i++;
+ }
+ printf("Smallest element in an array : %d", min);
+}
+```
+
+## 24. Program to print all the elements of an array using a for loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter the size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter elements of an array : ");
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ printf("Elements of an array are ");
+ for(int i = 0; i < n; i++)
+ {
+  printf("%d ", arr[i]);
+ }
+}
+```
+
+## 25. Program to find the sum of elements in an array using a while loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter the size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter elements of an array : ");
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int i = 0, sum = 0;
+ while(i < n)
+ {
+  sum+=arr[i];
+  i++;
+ }
+ printf("Sum of elements in an array : %d", sum);
+}
+```
