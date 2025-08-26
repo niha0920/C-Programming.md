@@ -275,3 +275,115 @@ int main()
  } 
 }
 ```
+
+## 15. Program to print even numbers between 1 to 20 using a for loop?
+```c
+#include<stdio.h>
+int main()
+{
+ printf("Even numbers from 1-20 : ");
+ for(int i = 0; i <= 20; i++)
+ {
+  if((i % 2) == 0)
+   printf("%d ", i);
+ }
+}
+```
+
+## 16. Program to calculate the sum of numbers from 1 to 100 using a while loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int i = 1, sum = 0;
+ while(i <= 100)
+ {
+  sum += i;
+  i++;
+ }
+ printf("Sum of numbers from 1 to 100 : %d", sum);
+}
+```
+
+## 17. Program to find the factorial of a given number using a for loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int num, fact = 1;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ for(int i = num; i > 0; i--)
+ {
+  fact *= i;
+ }
+ printf("Factorial of %d is %d", num, fact);
+}
+```
+
+## 18. Program to check whether a given number is prime or not using a while loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int num, i = 2, isprime = 1;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ if(i <= 1)
+ {
+  isprime = 0;
+ }
+ else
+ {
+  while(i <= (num / 2))
+  {
+   if(num % i == 0)
+   {
+    isprime = 0;
+    break;
+   }
+   i++;
+  }
+ }
+ if(isprime)
+  printf("%d is Prime", num);
+ else
+  printf("%d is not Prime", num);
+}
+```
+
+## 19. Program to find the sum of digits of a number using a while loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int num, sum = 0;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ while(num > 0)
+ { 
+  int rem = num % 10;
+  sum += rem;
+  num = num / 10;
+ }
+ printf("Sum of digits of a number : %d", sum);
+}
+```
+
+## 20. Program to print fibonacci series up to n terms using a for loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int n, temp1 = 0, temp2 = 1, nextTerm;
+ printf("Enter a number : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  printf("%d ", temp1);
+  nextTerm = temp1 + temp2;
+  temp1 = temp2;
+  temp2 = nextTerm;
+ }
+}
+```
