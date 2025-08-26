@@ -253,3 +253,25 @@ int main()
  }
 }
 ```
+
+## 14. Program to find maximum between two numbers using swicth case?
+```c
+#include<stdio.h>
+int main()
+{
+ int a, b;
+ printf("Enter two numbers : ");
+ scanf("%d %d", &a, &b);
+ switch(a > b)
+ {
+  case 1 : printf("Maximun : %d", a);
+           break;
+  case 0 : switch(b > a)
+           {
+            case 1 : printf("Maximum : %d", b);
+                     break;
+            case 0 : printf("Both are equal");
+           }
+ } 
+}
+```
