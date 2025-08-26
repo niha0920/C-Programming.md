@@ -177,3 +177,32 @@ int main()
  printf("Minimum : %d, Maximum : %d", min, max);
 }
 ```
+
+## 11. Program to enter week number and print day of week?
+```c
+#include<stdio.h>
+int main()
+{
+ int num;
+ printf("Enter week number : ");
+ scanf("%d", &num);
+ switch(num)
+ {
+  case 1 : printf("Sunday");
+           break;
+  case 2 : printf("Monday");
+           break;
+  case 3 : printf("Tuesday");
+           break; 
+  case 4 : printf("Wednesday");
+           break;
+  case 5 : printf("Thursday");
+           break;
+  case 6 : printf("Friday");
+           break;
+  case 7 : printf("Saturday");
+           break;
+  default : printf("Invalid Input");
+ }
+}
+```
