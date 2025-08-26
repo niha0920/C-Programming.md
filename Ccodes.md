@@ -503,7 +503,7 @@ int main()
 }
 ```
 
-## 26. 
+## 26. Program to count the number of vowels in a given string using for loop?
 ```c
 #include<stdio.h>
 #include<ctype.h>
@@ -521,4 +521,38 @@ int main()
   }
   printf("Number of vowels in %s are %d", str, count);
 }
+```
+
+## 27. Program to count the number of words in a given string using a while loop?
+```c
+#include<stdio.h>
+int main()
+{
+ char str[200];
+ printf("Enter a string : ");
+ fgets(str, sizeof(str), stdin);
+ int i = 0, count = 0;
+ while(str[i] != '\0')
+ {
+  if(str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
+   count++;
+  i++;
+ }
+ printf("Number of words in string : %d", count);
+}
+```
+
+## 28.
+```c
+
+```
+
+## 29. 
+```c
+
+```
+
+## 30. 
+```c
+
 ```
