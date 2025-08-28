@@ -740,3 +740,108 @@ int main()
  }
 }
 ```
+
+## 37. Program to print the armstrong numbers between 1 and 1000 using a for loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int rem;
+ printf("Armstrong numbers between 1 and 1000 : ");
+ for(int i = 1; i <= 1000; i++)
+ {
+  int temp = i, sum = 0;
+  while(temp > 0)
+  { 
+   rem = temp % 10;
+   sum += rem * rem * rem;
+   temp = temp / 10;
+  }
+  if(sum == i)
+   printf("%d ", i);
+ }
+}
+```
+
+## 38. Program to implement a simple calculator using switch-case statements?
+```c
+#include<stdio.h>
+int main()
+{
+ float num1, num2, res;
+ printf("Enter two numbers : ");
+ scanf("%f %f", &num1, &num2);
+ char op;
+ printf("Enter operation(+ - * /) : ");
+ scanf(" %c", &op);
+ switch(op)
+ {
+  case '+' : res = num1 + num2;
+             break;
+  case '-' : res = num1 - num2;
+             break;             
+  case '*' : res = num1 * num2;
+             break;
+  case '/' : if(num2 != 0)
+              res = num1 / num2;
+             else
+             {
+              printf("Division by zero error!");
+              return 1;
+             }
+             break;
+  default : printf("Invalid operator\n");
+            return 1;
+ }
+ printf("Result : %.2f", res);
+}
+```
+
+## 39. Program to check whether a given number is a palindrome or not using while loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int num, start, rem, final = 0;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ start = num;
+ while(num > 0)
+ {
+  rem = num % 10;
+  final = final * 10 + rem;
+  num = num / 10;
+ }
+ if(start == final)
+  printf("%d is a palindrome", start);
+ else
+  printf("%d is not a palindrome", start);
+}
+```
+
+## 40. Program to find the sum of elements in the lower triangular matrix using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n, sum = 0;
+ printf("Enter order of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j <= i; j++)
+  {
+   sum += mat[i][j];
+  }
+ }
+ printf("Sum of lower triangular elements : %d", sum);
+}
+```
