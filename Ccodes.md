@@ -845,3 +845,78 @@ int main()
  printf("Sum of lower triangular elements : %d", sum);
 }
 ```
+
+## 41. Program to find the sum of elememts in the upper triangular matrix using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n, sum = 0;
+ printf("Enter order of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   if(j >= i)
+    sum += mat[i][j];
+  }
+ }
+ printf("Sum of upper triangular elements : %d", sum);
+}
+```
+
+## 42. Program to remove duplicate elements from an array using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ printf("Array after removing duplicate elements : ");
+ for(int i = 0; i < n; i++)
+ {
+  int isduplicate = 0;
+  for(int j = 0; j < i; j++)
+  {
+   if(arr[i] == arr[j])
+   {
+    isduplicate = 1;
+    break;
+   }
+  }
+  if(!isduplicate)
+   printf("%d ", arr[i]);
+ }
+}
+```
+
+## 43. 
+```c
+
+```
+
+## 44. 
+```c
+
+```
+
+## 45. 
+```c
+
+```
