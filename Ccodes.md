@@ -572,7 +572,7 @@ int main()
 }
 ```
 
-## 29. program to concatenate two strings withouut using library functions using a while loop?
+## 29. program to concatenate two strings without using library functions using a while loop?
 ```c
 #include<stdio.h>
 int main()
