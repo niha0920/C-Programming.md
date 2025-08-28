@@ -542,17 +542,85 @@ int main()
 }
 ```
 
-## 28.
+## 28. Program to check whether a given string is a palindrome or not using a for loop?
 ```c
-
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+ char str[20];
+ printf("Enter a string : ");
+ scanf("%s", str);
+ int len = strlen(str);
+ if(str[len - 1] == '\n')
+  str[len - 1] = '\0';
+ len = strlen(str);
+ int flag = 1;
+ for(int i = 0; str[i] != '\0'; i++)
+ { 
+  for(int j = len - 1 - i; j > 0; j--)
+  {
+   if(str[i] != str[j])
+    flag = 0;
+    break;
+  }
+ }
+ if(flag)
+  printf("String is a Palindrome");
+ else
+  printf("String is not a Palindrome");
+}
 ```
 
-## 29. 
+## 29. program to concatenate two strings withouut using library functions using a while loop?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ char str1[10];
+ char str2[10];
+ printf("Enter two strings : ");
+ scanf("%s %s", str1, str2);
+ char str[25];
+ int i = 0, j = 0;
+ while(str1[i] != '\0')
+ {
+  if(str1[i] == '\n')
+  {
+   str1[i] = '\0';
+   break;
+  }
+  i++;
+ }
+ i = 0;
+ while(str1[i] != '\0')
+ {
+  i++;
+ }
+ while(str2[j] != '\0' && str2[j] != '\n')
+ { 
+  str1[i] = str2[j];
+  i++;
+  j++;
+ }
+ str1[i] = '\0';
+ printf("Concatinated String : %s", str1);
+}
 ```
 
-## 30. 
+## 30. Program to find the length of a string using a for loop?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ char str[20];
+ printf("Enter a string : ");
+ scanf("%s", str);
+ int count = 0;
+ for(int i = 0; str[i] != '\0'; i++)
+ {
+  count++;
+ }
+ printf("Length of string %s : %d", str, count);
+}
 ```
