@@ -725,3 +725,7 @@ int main()
  }
 }
 ```
+
+## 36. Program to print the multiplication table of a given number using a for loop?
+```c
+
