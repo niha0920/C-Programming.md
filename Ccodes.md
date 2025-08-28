@@ -318,7 +318,7 @@ int main()
  {
   fact *= i;
  }
- printf("Factorial of %d is %d", num, fact);
+ printf("Factorial : %d", fact);
 }
 ```
 
@@ -625,7 +625,7 @@ int main()
 }
 ```
 
-## 31. 
+## 31. Program to convert a string to uppercase using a while loop?
 ```c
 #include<stdio.h>
 int main()
@@ -644,22 +644,84 @@ int main()
 }
 ```
 
-## 32. 
+## 32. Program to find the power a number using a for loop?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int base, exponent;
+ printf("Enter base : ");
+ scanf("%d", &base);
+ printf("Enter Exponent : ");
+ scanf("%d", &exponent);
+ long res = 1;
+ for(int i = 1; i <= exponent; i++)
+ {
+  res *= base;
+ }
+ printf("%d to the power %d : %ld", base, exponent, res);
+}
 ```
 
-## 33. 
+## 33. Program to find the factorial of a number using a while loop?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int num;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ int i = num;
+ unsigned long long fact = 1;
+ while(i > 0)
+ {
+  fact *= i;
+  i--;
+ }
+ printf("Factorial : %llu", fact);
+}
 ```
 
-## 34.
+## 34. Program to find the gcd of two numbers using a while loop?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int num1, num2, gcd;
+ printf("Enter two numbers : ");
+ scanf("%d %d", &num1, &num2);
+ int x = num1, y = num2;
+ while(y != 0)
+ {
+  int temp = y;
+  y = x % y;
+  x = temp;
+ }
+ gcd = x;
+ printf("GCD of %d and %d is %d", num1, num2, gcd);
+}
 ```
 
-## 35. 
+## 35. Program to find the lcm of two numbers using for loop?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int num1, num2, lcm;
+ printf("Enter two numbers : ");
+ scanf("%d %d", &num1, &num2);
+ int temp;
+ if(num1 > num2)
+  temp = num1;
+ else
+  temp = num2;
+ for(lcm = temp; ; lcm++)
+ {
+  if(lcm % num1 == 0 && lcm % num2 == 0)
+  {
+   printf("LCM of %d and %d is %d", num1, num2, lcm);
+   break;
+  }
+ }
+}
 ```
