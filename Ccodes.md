@@ -906,17 +906,111 @@ int main()
 }
 ```
 
-## 43. 
+## 43. Program to sort an array of integers in ascending order using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ for(int i = 0; i < n - 1; i++)
+ {
+  for(int j = i + 1; j < n; j++)
+  {
+   if(arr[i] > arr[j])
+   {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+   }
+  }
+ }
+ printf("Array in ascending order : ");
+ for(int i = 0; i < n; i++)
+ {
+  printf("%d ", arr[i]);
+ }
+}
 ```
 
-## 44. 
+## 44. Program to sort an array of integers in descending order using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ for(int i = 0; i < n - 1; i++)
+ {
+  for(int j = i + 1; j < n; j++)
+  {
+   if(arr[i] < arr[j])
+   {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+   }
+  }
+ }
+ printf("Array in descending order : ");
+ for(int i = 0; i < n; i++)
+ {
+  printf("%d ", arr[i]);
+ }
+}
 ```
 
-## 45. 
+## 45. Program to find the second largest element in an array using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ if(n < 2)
+ {
+  printf("No second largest element");
+  return 1;
+ }
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int max1 = INT_MIN, max2 = INT_MIN;
+ if(n > 2)
+ {
+  for(int i = 0; i < n; i++)
+  {
+   if(arr[i] > max1)
+   {
+     max2 = max1;
+     max1 = arr[i];
+   } 
+   else if(arr[i] > max2 && arr[i] != max1)
+    max2 = arr[i];
+  }
+ }
+ if(max2 != INT_MIN)
+  printf("Second largest element : %d", max2);
+ else
+  printf("No second largest element");
+}
 ```
