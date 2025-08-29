@@ -1162,3 +1162,94 @@ int main()
  }
 }
 ```
+
+## 51. Program to add two matrices using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n, m;
+ printf("Enter rows and columns : ");
+ scanf("%d %d", &n, &m);
+ int mat[n][m], mat1[n][m], mat2[n][m];
+ printf("Enter elements of first matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat1[i][j]);
+  }
+ }
+ printf("Enter elements of second matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat2[i][j]);
+  }
+ }
+ printf("Sum of matrices : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   mat[i][j] = mat1[i][j] + mat2[i][j];
+   printf("%d ", mat[i][j]);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 52. Program to subtract two matrices using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n, m;
+ printf("Enter rows and columns : ");
+ scanf("%d %d", &n, &m);
+ int mat[n][m], mat1[n][m], mat2[n][m];
+ printf("Enter elements of first matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat1[i][j]);
+  }
+ }
+ printf("Enter elements of second matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat2[i][j]);
+  }
+ }
+ printf("Difference of matrices : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   mat[i][j] = mat1[i][j] - mat2[i][j];
+   printf("%d ", mat[i][j]);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 53. MULTIPLY TWO MATRICES USING LOOPS AND IF-ELSE STATEMENTS?
+```c
+
+```
+
+## 54. PRINT THE ELEMENTS OF AN ARRAY IN REVERSE ORDER USING LOOPS AND IF-ELSE STATEMENTS?
+```c
+
+```
+
+## 55. CHECK WHETHER TWO ARRAYS ARE EQUAL OR NOT USING LOOPS AND IF-ELSE STATEMENTS?
+```c
+
+```
