@@ -1014,3 +1014,151 @@ int main()
   printf("No second largest element");
 }
 ```
+
+## 46. Program to find the frequency of each element in an array using loops and if-else statements?
+```c
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter elements : ");
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ 
+ printf("Element : Frequency\n");
+ for(int i = 0; i < n; i++)
+ {
+  int isvisited = 0;
+  for(int k = i; k > 0; k--)
+  {
+   if(arr[i] == arr[k - 1])
+   {
+    isvisited = 1;
+    break;
+   }  
+  }
+  if(isvisited)
+   continue;
+  int count = 0;
+  for(int j = 0; j < n; j++)
+  {
+   if(arr[i] == arr[j])
+    count++;
+  }
+  printf("%d : %d\n", arr[i], count);
+ }
+}
+```
+
+## 47. Program to check whether a matrix is an identity matrix or not using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter order of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ int isidentity = 1;
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   if((i == j && mat[i][j] != 1) || (i != j && mat[i][j] != 0))
+   {
+    isidentity = 0;
+    break;
+   }
+  }
+  if(!isidentity)
+   break;
+ }
+ if(isidentity)
+  printf("Matrix is an identity matrix");
+ else
+  printf("Matrix is not an identity matrix");
+}
+```
+
+## 48. Program to print all the odd numbers between 1 to 50 using a for loop?
+```c
+#include<stdio.h>
+int main()
+{
+printf("Odd numbers between 1 to 50 : ");
+ for(int i = 0; i <= 50; i++)
+ {
+  if(i % 2 != 0)
+   printf("%d ", i);
+ }
+}
+```
+
+## 49. Program to find the sum of elements in each coloum of a matrix using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter order of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ for(int j = 0; j < n; j++)
+ {
+  int sum = 0;
+  for(int i = 0; i < n; i++)
+  {
+   sum += mat[i][j];
+  }
+  printf("Sum of column %d : %d\n", j + 1, sum);
+ }
+}
+```
+
+## 50. Program to find the sum of elements in each row of a matrix using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter order of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ for(int i = 0; i < n; i++)
+ {
+  int sum = 0;
+  for(int j = 0; j < n; j++)
+  {
+   sum += mat[i][j];
+  }
+  printf("Sum of row %d : %d\n", i + 1, sum);
+ }
+}
+```
