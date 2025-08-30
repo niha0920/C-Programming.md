@@ -1239,17 +1239,123 @@ int main()
 }
 ```
 
-## 53. MULTIPLY TWO MATRICES USING LOOPS AND IF-ELSE STATEMENTS?
+## 53. Program to multiply two matrices using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int r1, c1;
+ printf("Enter rows and columns of first matrix : ");
+ scanf("%d %d", &r1, &c1);
+ int r2, c2;
+ printf("Enter rows and columns of second matrix : ");
+ scanf("%d %d", &r2, &c2);
+ if(c1 != r2)
+ {
+  printf("Matrix multiplication not possible");
+  return 1;
+ }
+ int mat1[r1][c1];
+ printf("Enter first matrix : ");
+ for(int i = 0; i < r1; i++)
+ {
+  for(int j = 0; j < c1; j++)
+  {
+   scanf("%d", &mat1[i][j]);
+  }
+ }
+ int mat2[r2][c2];
+ printf("Enter second matrix : ");
+ for(int i = 0; i < r2; i++)
+ {
+  for(int j = 0; j < c2; j++)
+  {
+   scanf("%d", &mat2[i][j]);
+  }
+ }
+ int mat[r1][c2];
+ for(int i = 0; i < r1; i++)
+ {
+  for(int j = 0; j < c2; j++)
+  {
+   mat[i][j] = 0;
+  }
+ }
+ for(int i = 0; i < r1; i++)
+ {
+  for(int j = 0; j < c2; j++)
+  {
+   for(int k = 0; k < c1; k++)
+   {
+    mat[i][j] += mat1[i][k] * mat2[k][j];
+   }
+  }
+ }
+ printf("Product of matrices : ");
+ for(int i = 0; i < r1; i++)
+ {
+  for(int j = 0; j < c2; j++)
+  {
+   printf("%d ", mat[i][j]);
+  }
+  printf("\n");
+ }
+}
 ```
 
-## 54. PRINT THE ELEMENTS OF AN ARRAY IN REVERSE ORDER USING LOOPS AND IF-ELSE STATEMENTS?
+## 54. Program to print the elements of an array in reverse order using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter array size : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ printf("Array in reverse order : ");
+ for(int i = n - 1; i >= 0; i--)
+ {
+  printf("%d ", arr[i]);
+ }
+}
 ```
 
-## 55. CHECK WHETHER TWO ARRAYS ARE EQUAL OR NOT USING LOOPS AND IF-ELSE STATEMENTS?
+## 55. Program to check whether two arrays are equal or not using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of arrays : ");
+ scanf("%d", &n);
+ int arr1[n], arr2[n];
+ printf("Enter elements of first array : ");
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr1[i]);
+ }
+ printf("Enter elements of second array : ");
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr2[i]);
+ }
+ int isequal = 1;
+ for(int i = n - 1; i >= 0; i--)
+ {
+  if(arr1[i] != arr2[i])
+  {
+   isequal = 0;
+   break;
+  }
+ }
+ if(isequal)
+  printf("Arrays are equal");
+ else
+  printf("Arrays are not equal");
+}
 ```
