@@ -1722,7 +1722,20 @@ int main()
 }
 ```
 
-## 70. 
+## 70. Program to find the area of a circle given its radius using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+#define pi 3.14
+int main()
+{
+ double radius, area;
+ scanf("%lf", &radius);
+ if(radius >= 0)
+ {
+  area = pi * radius * radius;
+  printf("%lf", area);
+ }
+ else
+  printf("Radius cannot be negative");
+}
 ```
