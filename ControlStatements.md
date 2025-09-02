@@ -1642,24 +1642,84 @@ int main()
 }
 ```
 
-## 66. 
+## 66. Program to find the sum of all odd numbers between two given numbers using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int num1, num2;
+ printf("Enter two numbers : ");
+ scanf("%d %d", &num1, &num2);
+ int sum = 0;
+ for(int i = num1; i <= num2; i++)
+ {
+  if(i % 2 != 0)
+   sum += i;
+ }
+ printf("Sum of odd numbers : %d", sum);
+}
 ```
 
-## 67. 
+## 67. Program to check whether a given number is a perfect square or not using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int num;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ int flag = 0;
+ for(int i = 0; i < num; i++)
+ {
+  if(i * i == num)
+  {
+   flag = 1;
+   
+   break;
+  }
+ }
+ if(flag)
+  printf("%d is a perfect square", num);
+ else
+  printf("%d is not a perfect square", num);
+}
 ```
 
-## 68. 
+## 68. Program to calculate the power of a number using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int base, exponent;
+ printf("Enter base and exponent : ");
+ scanf("%d %d", &base, &exponent);
+ int power = 1;
+ if(exponent >= 1)
+ {
+  for(int i = 1; i <= exponent; i++)
+  {
+   power *= base;
+  }
+  printf("Result : %d", power);
+ }
+ else
+  printf("Exponent should be non-negative");
+}
 ```
 
-## 69. 
+## 69. Program to find the ascii value of a character using loo[s and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ char ch;
+ printf("Enter a character : ");
+ scanf("%c", &ch);
+ if((ch >= 32 && ch <= 126) || (ch >= 0 && ch <= 255))
+  printf("ASCII value of %c is %d", ch, ch);
+ else
+  printf("Invalid character input");
+}
 ```
 
 ## 70. 
