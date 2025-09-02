@@ -1739,3 +1739,63 @@ int main()
   printf("Radius cannot be negative");
 }
 ```
+
+## 71. Program to find the sum of all prime numbers between 1 and 1000 using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int sum = 0;
+ for(int num = 2; num <= 1000; num++)
+ {
+  int isprime = 1;
+  for(int i = 2; i * i <= num; i++)
+  {
+   if(num % i == 0)
+   {
+    isprime = 0;
+    break;
+   }
+  }
+  if(isprime)
+   sum += num;
+ }
+ printf("Sum of all primes between 1 and 1000 is %d", sum);
+}
+```
+
+## 72. Program to print the pattern of stars in a hollow square shape using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = 1; j <= n; j++)
+  {
+   if(i == 1 || i == n || j == 1 || j == n)
+    printf("* ");
+   else
+    printf("  ");
+  }
+  printf("\n");
+ }
+}
+```
+
+## 73. 
+```c
+
+```
+
+## 74. 
+```c
+
+```
+
+## 75. 
+```c
+
+```
