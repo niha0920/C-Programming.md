@@ -1444,14 +1444,68 @@ int main()
 }
 ```
 
-## 58. FIND THE DIFFERENCE OF TWO ARRAYS USING LOOPS AND IF-ELSE STATEMENTS?
+## 58. Program to find the difference of two arrays using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n1, n2;
+ printf("Enter size of first array : ");
+ scanf("%d", &n1);
+ int arr1[n1];
+ printf("Enter %d elements : ", n1);
+ for(int i = 0; i < n1; i++)
+ {
+  scanf("%d", &arr1[i]);
+ }
+ printf("Enter size of second array : ");
+ scanf("%d", &n2);
+ int arr2[n2];
+ printf("Enter %d elements : ", n2);
+ for(int i = 0; i < n2; i++)
+ {
+  scanf("%d", &arr2[i]);
+ }
+ printf("Difference (A - B) : ");
+ for(int i = 0; i < n1; i++)
+ {
+  int found = 0;
+  for(int j = 0; j < n2; j++)
+  {
+   if(arr1[i] == arr2[j])
+   {
+    found = 1;
+    break;
+   }
+  }
+  if(!found)
+   printf("%d ", arr1[i]);
+ }
+}
 ```
 
-## 59. FIND THE MISSING NUMBER IN AN ARRAY CONTAINING NUMBERS FROM 1 TO N USING LOOPS AND IF-ELSE STATEMENTS?
+## 59. Program to find the missing number in an array containing numbers from 1 to n using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ scanf("%d", &n);
+ int arr[n];
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int sum = 0;
+ for(int i = 0; i < n; i++)
+ {
+  sum += arr[i];
+ }
+ int m = n + 1;
+ int res = (m * (m + 1)) / 2;
+ int num = res - sum;
+ printf("%d", num);
+}
 ```
 
 ## 60. FIND THE MAJORITY ELEMENT IN AN ARRAY USING LOOPS AND IF-ELSE STATEMENTS?
