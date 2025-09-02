@@ -1359,3 +1359,102 @@ int main()
   printf("Arrays are not equal");
 }
 ```
+
+## 56. Program to find the union of two arrays using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n1, n2, found;
+ printf("Enter size of first array : ");
+ scanf("%d", &n1);
+ int arr1[n1];
+ printf("Enter elements of first array : ");
+ for(int i = 0; i < n1; i++)
+ {
+  scanf("%d", &arr1[i]);
+ }
+ printf("Enter size of second array : ");
+ scanf("%d", &n2);
+ int arr2[n2];
+ printf("Enter elements of second array : ");
+ for(int i = 0; i < n2; i++)
+ {
+  scanf("%d", &arr2[i]);
+ }
+ printf("Union : ");
+ for(int i = 0; i < n1; i++)
+ {
+   printf("%d ", arr1[i]);
+ }
+ for(int i = 0; i < n2; i++)
+ {
+  found = 0;
+  for(int j = 0; j < n1; j++)
+  {
+   if(arr2[i] == arr1[j])
+   {
+    found = 1;
+    break;
+   }
+  }
+  if(!found)
+   printf("%d ", arr2[i]);
+ }
+}
+```
+
+## 57. Program to find the intersection of two arrays using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n1, n2, found;
+ printf("Enter size of first array : ");
+ scanf("%d", &n1);
+ int arr1[n1];
+ printf("Enter elements of first array : ");
+ for(int i = 0; i < n1; i++)
+ {
+  scanf("%d", &arr1[i]);
+ }
+ printf("Enter size of second array : ");
+ scanf("%d", &n2);
+ int arr2[n2];
+ printf("Enter elements of second array : ");
+ for(int i = 0; i < n2; i++)
+ {
+  scanf("%d", &arr2[i]);
+ }
+ printf("Intersection : ");
+ for(int i = 0; i < n1; i++)
+ {
+  found = 0;
+  for(int j = 0; j < n2; j++)
+  {
+   if(arr1[i] == arr2[j])
+   {
+    found = 1;
+    break;
+   }
+  }
+  if(found)
+   printf("%d ", arr1[i]);
+ }
+}
+```
+
+## 58. FIND THE DIFFERENCE OF TWO ARRAYS USING LOOPS AND IF-ELSE STATEMENTS?
+```c
+
+```
+
+## 59. FIND THE MISSING NUMBER IN AN ARRAY CONTAINING NUMBERS FROM 1 TO N USING LOOPS AND IF-ELSE STATEMENTS?
+```c
+
+```
+
+## 60. FIND THE MAJORITY ELEMENT IN AN ARRAY USING LOOPS AND IF-ELSE STATEMENTS?
+```c
+
+```
