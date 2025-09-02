@@ -1490,25 +1490,154 @@ int main()
 int main()
 {
  int n;
+ printf("Enter n : ");
  scanf("%d", &n);
- int arr[n];
- for(int i = 0; i < n; i++)
+ int arr[n - 1];
+ printf("Enter %d numbers : ", n - 1);
+ for(int i = 0; i < n - 1; i++)
  {
   scanf("%d", &arr[i]);
  }
  int sum = 0;
- for(int i = 0; i < n; i++)
+ for(int i = 0; i < n - 1; i++)
  {
   sum += arr[i];
  }
- int m = n + 1;
- int res = (m * (m + 1)) / 2;
+ int res = (n * (n + 1)) / 2;
  int num = res - sum;
- printf("%d", num);
+ printf("Missing number is %d", num);
 }
 ```
 
-## 60. FIND THE MAJORITY ELEMENT IN AN ARRAY USING LOOPS AND IF-ELSE STATEMENTS?
+## 61. Program to print the pattern of stars using nested loops?
 ```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j <= i; j++)
+  {
+   printf("* ");
+  }
+  printf("\n");
+ }
+}
+```
 
+## 62. Program to search for an element in an array using linear search and a for loop?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int key;
+ printf("Enter element to search : ");
+ scanf("%d", &key);
+ int found = 0;
+ for(int i = 0; i < n; i++)
+ {
+  if(arr[i] == key)
+  {
+   found = 1;
+   printf("Element found at index %d", i);
+   break;
+  }
+ }
+ if(!found)
+  printf("Element not found");
+}
+```
+
+## 63. Program to check whether a given number is a palindrome in both decimal and binary representations using loops and if-else statements?
+```c
+#include<stdio.h>
+int reverse(int num)
+{ 
+ int rev = 0;
+ while(num > 0)
+ {
+  int rem = num % 10;
+  rev = rev * 10 + rem;
+  num /= 10;
+ }
+ return rev;
+}
+int isBinaryPalindrome(int num)
+{
+ int original = num;
+ int bit[32], n= 0;
+ while(num > 0)
+ {
+  bit[n++] = num % 2;
+  num /= 2;
+ }
+ for(int i = 0, j = n - 1; i <= j; i++, j--)
+ {
+  if(bit[i] != bit[j])
+   return 0;
+ }
+ return 1;
+}
+int main()
+{
+ int num, temp, decpal = 0;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ temp = reverse(num);
+ if(temp == num) 
+  decpal = 1;
+ int binpal = isBinaryPalindrome(num);
+ if(decpal && binpal)
+  printf("%d is palindrome in both decimal and binary", num);
+ else
+  printf("%d is not palindrome in both decimal and binary", num);
+}
+```
+
+## 64. Program to find the sum of first n natural numbers which are not divisible by 3 or 5 using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter n : ");
+ scanf("%d", &n);
+ int sum = 0;
+ for(int i = 0; i < n; i++)
+ {
+  if((i % 3) != 0 && (i % 5) != 0)
+   sum += i;
+ }
+ printf("Sum : %d", sum);
+}
+```
+
+## 65. Program to find the sum of all even numbers between two given numbers using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int num1, num2;
+ printf("Enter two numbers : ");
+ scanf("%d %d", &num1, &num2);
+ int sum = 0;
+ for(int i = num1; i <= num2; i++)
+ {
+  if(i % 2 == 0)
+   sum += i;
+ }
+ printf("Sum of even numbers : %d", sum);
+}
 ```
