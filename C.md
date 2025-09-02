@@ -57,3 +57,37 @@ int main() {
     return 0;
 }
 ```
+
+## Program that interleaves words from two files (file1.txt and file2.txt) and writes the output to a third file (file3.txt) 
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+    FILE *f1, *f2, *f3;
+    char w1[100], w2[100];
+    f1 = fopen("file_1.txt", "r");
+    f2 = fopen("file_2.txt", "r");
+    f3 = fopen("file_3.txt", "w");
+    if (f1 == NULL || f2 == NULL || f3 == NULL) {
+        printf("Error opening files.");
+        return 1;
+    }
+    int r1, r2;
+    while (1) {
+        r1 = fscanf(f1, "%s", w1);
+        r2 = fscanf(f2, "%s", w2);
+        if (r1 == EOF && r2 == EOF)
+            break;
+        if (r1 != EOF)
+            fprintf(f3, "%s ", w1);
+        if (r2 != EOF)
+            fprintf(f3, "%s ", w2);
+    }
+    fclose(f1);
+    fclose(f2);
+    fclose(f3);
+    printf("file_3.txt.");
+    return 0;
+}
+```
