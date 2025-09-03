@@ -2106,12 +2106,44 @@ int main()
 }
 ```
 
-## 87. 
+## 87. Program to find the sum of the cubes of the digits of a given number using loops and if-else statements? 
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int num;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ int sum = 0;
+ while(num > 0)
+ {
+  int digit = num % 10;
+  sum += digit * digit * digit;
+  num = num / 10;
+ }
+ printf("Sum of cubes of digits : %d", sum);
+}
 ```
 
-## 88. 
+## 88. Program to find the sum of the even digits and the sum of the odd digits separately in a given number using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int num;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ int evensum = 0, oddsum = 0;
+ while(num > 0)
+ {
+  int digit = num % 10;
+  if(digit % 2 == 0)
+   evensum += digit;
+  else
+   oddsum += digit;
+  num = num / 10;
+ }
+ printf("Sum of even digits : %d\n", evensum);
+ printf("Sum of odd digits : %d", oddsum);
+}
 ```
