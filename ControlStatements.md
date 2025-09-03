@@ -1853,3 +1853,125 @@ int main()
  }
 }
 ```
+
+## 77. Program to print the pattern of stars in a diamond shape using loops and if-else stetements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = i; j <= n; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("* ");
+  }
+  printf("\n");
+ }
+ for(int i = n - 1; i <= n; i--)
+ {
+  for(int j = i; j <= n; j++)
+  { 
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("* ");
+  }
+  printf("\n");
+ }
+}
+```
+
+## 78. Program to print the pattern of stars in a hallow diamond shape using loops and if-else sattements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = 1; j <= n - i; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= 2 * i - 1; j++)
+  {
+   if(j == 1 || j == 2 * i - 1)
+    printf("*");
+   else
+    printf(" ");
+  }
+  printf("\n");
+ }
+ for(int i = n - 1; i >= 1; i--)
+ {
+  for(int j = 1; j <= n - i; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= 2 * i - 1; j++)
+  {
+   if(j == 1 || j == 2 * i - 1)
+    printf("*");
+   else
+    printf(" ");
+  }
+  printf("\n");
+ }
+}
+```
+
+## 79. Program to print the pattern of numbers in a pyramid shape using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n, num = 1;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = 1; j <= n - i; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("%d ", num++);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 80. Program to print the pattern of numbers in a mirrored pyramid shape using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = n; i >= 1; i--)
+ {
+  for(int j = 1; j <= n - i; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("%d ", i);
+  }
+  printf("\n");
+ }
+}
+```
