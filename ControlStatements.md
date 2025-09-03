@@ -1785,17 +1785,71 @@ int main()
 }
 ```
 
-## 73. 
+## 74. Program to print the pattern of stars in a mirrored right triangle shape using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = i; j < n; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("*");
+  }
+  printf("\n");
+ }
+}
 ```
 
-## 74. 
+## 75. Program to print the pattern of stars in a pyramid shape using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = i; j < n; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("* ");
+  }
+  printf("\n");
+ }
+}
 ```
 
-## 75. 
+## 76. Program to print the pattern of stars in a mirrored pyramid shape using loops and if-else statements?
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = n; i >= 1; i--)
+ {
+  for(int j = i; j < n; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("* ");
+  }
+  printf("\n");
+ }
+}
 ```
