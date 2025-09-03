@@ -58,7 +58,7 @@ int main() {
 }
 ```
 
-## Program that interleaves words from two files (file1.txt and file2.txt) and writes the output to a third file (file3.txt) 
+## 2. Program that interleaves words from two files (file1.txt and file2.txt) and writes the output to a third file (file3.txt) 
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -89,5 +89,35 @@ int main() {
     fclose(f3);
     printf("file_3.txt.");
     return 0;
+}
+```
+
+## 3. Program to print all subarrays of an array
+```c
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter elements of array : ");
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ printf("Subarrays : ");
+ for(int i = 0; i < n; i++)
+ { 
+  for(int j = i; j < n; j++)
+  {
+   for(int k = i; k <= j; k++)
+   {
+    printf("%d", arr[k]);
+   }
+   printf("\n");
+  }
+ }
 }
 ```
