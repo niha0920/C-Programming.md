@@ -1975,3 +1975,143 @@ int main()
  }
 }
 ```
+
+## 81. Program to print the pattern of numbers in a right triangle shape using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n, num = 1;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = 1; j <= i; j++)
+  {
+   printf("%d ", num++);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 82. Program to print the pattern of numbers in a mirrored right triangle shape using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = i; j < n; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("%d", j);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 83. Program to print the pattern of alphabets in a pyramid shape using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ char alpha = 'a';
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+  for(int j = i; j < n; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("%c ", alpha++);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 84. Program to print the pattern of alphabets in a mirrored pyramid shape using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ char alpha = 'a';
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = n; i >= 1; i--)
+ {
+  for(int j = i; j < n; j++)
+  {
+   printf(" ");
+  }
+  for(int j = 1; j <= i; j++)
+  {
+   printf("%c ", alpha++);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 85. Program to print the pattern of alphabets in a right triangle shape using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ char alpha = 'a';
+ printf("Enter number of rows : ");
+ scanf("%d", &n);
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j <= i; j++)
+  {
+   printf("%c ", alpha++);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 86. program to find the area of a rectangle given its length and breadth using loops and if-else statements?
+```c
+#include<stdio.h>
+int main()
+{
+ int length, breadth, area;
+ printf("Enter length and breadth : ");
+ scanf("%d %d", &length, &breadth);
+ if(length > 0 && breadth > 0)
+ {
+  area = length * breadth;
+  printf("Area of rectangle : %d", area);
+ }
+ else
+ {
+  printf("length and breadth should be positive");
+ }
+}
+```
+
+## 87. 
+```c
+
+```
+
+## 88. 
+```c
+
+```
