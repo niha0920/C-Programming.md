@@ -238,14 +238,64 @@ int main()
 }
 ```
 
-## 9. 
+## 9. Program to find the maximum and minimum elements in an array
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of elements : ");
+ scanf("%d", &n);
+ int arr[n];
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int min = arr[0], max = arr[0];
+ for(int  i = 0; i < n ; i++)
+ {
+  if(arr[i] < min)
+   min = arr[i];
+  if(arr[i] > max)
+   max= arr[i];
+ }
+ printf("Minimun : %d\nMaximum : %d", min, max);
+}
 ```
 
-## 10. 
+## 10. Program to seperate odd and even integers into separate arrays
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of elements : ");
+ scanf("%d", &n);
+ int arr[n];
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int even[n], odd[n];
+ int evencount = 0, oddcount = 0;
+ for(int i = 0; i < n; i++)
+ {
+  if(arr[i] % 2 == 0)
+   even[evencount++] = arr[i];
+  else
+   odd[oddcount++] = arr[i];
+ }
+ printf("Even elements : ");
+ for(int i = 0; i < evencount; i++)
+ {
+  printf("%d ", even[i]);
+ }
+ printf("\nOdd elements : ");
+ for(int i = 0; i < oddcount; i++)
+ {
+  printf("%d ", odd[i]);
+ }
+}
 ```
 
 ## Program that calculates the sums of adjacent elements and print the highest sum
