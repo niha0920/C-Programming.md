@@ -474,6 +474,201 @@ int main()
 }
 ```
 
+## 16. Program for a 2D array of size 3x3 and print the matrix
+```c
+#include<stdio.h>
+int main()
+{
+ int mat[3][3];
+ printf("Enter elements of 3x3 matrix : ");
+ for(int i = 0; i < 3; i++)
+ {
+  for(int j = 0; j < 3; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ printf("Matrix : ");
+ for(int i = 0; i < 3; i++)
+ {
+  for(int j = 0; j < 3; j++)
+  {
+   printf("%d ", mat[i][j]);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 17. Program for adding two matrices of the same size
+```c
+#include<stdio.h>
+int main()
+{
+ int n, m;
+ printf("Enter rows and columns : ");
+ scanf("%d %d", &n, &m);
+ int mat[n][m], mat1[n][m], mat2[n][m];
+ printf("Enter elements of first matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat1[i][j]);
+  }
+ }
+ printf("Enter elements of second matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat2[i][j]);
+  }
+ }
+ printf("Sum of matrices : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   mat[i][j] = mat1[i][j] + mat2[i][j];
+   printf("%d ", mat[i][j]);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 18. Program for the subtraction of two matrices
+```c
+#include<stdio.h>
+int main()
+{
+ int n, m;
+ printf("Enter rows and columns : ");
+ scanf("%d %d", &n, &m);
+ int mat[n][m], mat1[n][m], mat2[n][m];
+ printf("Enter elements of first matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat1[i][j]);
+  }
+ }
+ printf("Enter elements of second matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat2[i][j]);
+  }
+ }
+ printf("Difference of matrices : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   mat[i][j] = mat1[i][j] - mat2[i][j];
+   printf("%d ", mat[i][j]);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 19. Program for the multiplication of two square matrices
+```c
+#include<stdio.h>
+int main()
+{
+ int r1, c1;
+ printf("Enter rows and columns of first matrix : ");
+ scanf("%d %d", &r1, &c1);
+ int r2, c2;
+ printf("Enter rows and columns of second matrix : ");
+ scanf("%d %d", &r2, &c2);
+ if(c1 != r2)
+ {
+  printf("Matrix multiplication not possible");
+  return 1;
+ }
+ int mat1[r1][c1];
+ printf("Enter first matrix : ");
+ for(int i = 0; i < r1; i++)
+ {
+  for(int j = 0; j < c1; j++)
+  {
+   scanf("%d", &mat1[i][j]);
+  }
+ }
+ int mat2[r2][c2];
+ printf("Enter second matrix : ");
+ for(int i = 0; i < r2; i++)
+ {
+  for(int j = 0; j < c2; j++)
+  {
+   scanf("%d", &mat2[i][j]);
+  }
+ }
+ int mat[r1][c2];
+ for(int i = 0; i < r1; i++)
+ {
+  for(int j = 0; j < c2; j++)
+  {
+   mat[i][j] = 0;
+  }
+ }
+ for(int i = 0; i < r1; i++)
+ {
+  for(int j = 0; j < c2; j++)
+  {
+   for(int k = 0; k < c1; k++)
+   {
+    mat[i][j] += mat1[i][k] * mat2[k][j];
+   }
+  }
+ }
+ printf("Product of matrices : ");
+ for(int i = 0; i < r1; i++)
+ {
+  for(int j = 0; j < c2; j++)
+  {
+   printf("%d ", mat[i][j]);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 20. Program to find the transpose of a given matrix
+```c
+#include<stdio.h>
+int main()
+{
+ int n, m;
+ printf("Enter rows and columns : ");
+ scanf("%d %d", &n, &m);
+ int mat[n][m];
+ printf("Enter elements of matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ } 
+ printf("Transpose : ");
+ for(int i = 0; i < m; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   printf("%d ", mat[j][i]);
+  }
+  printf("\n");
+ }
+}
+```
+
 ## Program that calculates the sums of adjacent elements and print the highest sum
 ```C
 #include<stdio.h>
