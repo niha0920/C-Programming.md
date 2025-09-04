@@ -1018,7 +1018,6 @@ int main()
 ## 46. Program to find the frequency of each element in an array using loops and if-else statements?
 ```c
 #include<stdio.h>
-#include<limits.h>
 int main()
 {
  int n;
