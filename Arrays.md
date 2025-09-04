@@ -298,6 +298,182 @@ int main()
 }
 ```
 
+## 11. Program to sort elements of an array in ascending order
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ for(int i = 0; i < n - 1; i++)
+ {
+  for(int j = i + 1; j < n; j++)
+  {
+   if(arr[i] > arr[j])
+   {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+   }
+  }
+ }
+ printf("Array in ascending order : ");
+ for(int i = 0; i < n; i++)
+ {
+  printf("%d ", arr[i]);
+ }
+}
+
+```
+
+## 12. Program to sort the elements of the array in descending order
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ for(int i = 0; i < n - 1; i++)
+ {
+  for(int j = i + 1; j < n; j++)
+  {
+   if(arr[i] < arr[j])
+   {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+   }
+  }
+ }
+ printf("Array in descending order : ");
+ for(int i = 0; i < n; i++)
+ {
+  printf("%d ", arr[i]);
+ }
+}
+```
+
+## 13. Program to delete an element at a desired position from an array
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter number of elements : ");
+ scanf("%d", &n);
+ int arr[n];
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int position;
+ printf("Enter position to delete : ");
+ scanf("%d", &position);
+ printf("Array after deletion : ");
+ for(int i = 0; i < n; i++)
+ {
+  if(i != position)
+   printf("%d ", arr[i]);
+ }
+}
+```
+
+## 14. Program to find the second largest element in an array
+```c
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ if(n < 2)
+ {
+  printf("No second largest element");
+  return 1;
+ }
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int max1 = INT_MIN, max2 = INT_MIN;
+ if(n > 2)
+ {
+  for(int i = 0; i < n; i++)
+  {
+   if(arr[i] > max1)
+   {
+     max2 = max1;
+     max1 = arr[i];
+   } 
+   else if(arr[i] > max2 && arr[i] != max1)
+    max2 = arr[i];
+  }
+ }
+ if(max2 != INT_MIN)
+  printf("Second largest element : %d", max2);
+ else
+  printf("No second largest element");
+}
+```
+
+## 15. Program to find the second smallest element in an array
+```c
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+ int n;
+ printf("Enter size of array : ");
+ scanf("%d", &n);
+ if(n < 2)
+ {
+  printf("No second largest element");
+  return 1;
+ }
+ int arr[n];
+ printf("Enter %d elements : ", n);
+ for(int i = 0; i < n; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ int min1 = INT_MAX, min2 = INT_MAX;
+ if(n > 2)
+ {
+  for(int i = 0; i < n; i++)
+  {
+   if(arr[i] < min1)
+   {
+     min2 = min1;
+     min1 = arr[i];
+   } 
+   else if(arr[i] < min2 && arr[i] != min1)
+    min2 = arr[i];
+  }
+ }
+ if(min2 != INT_MAX)
+  printf("Second smallest element : %d", min2);
+ else
+  printf("No second smallest element");
+}
+```
+
 ## Program that calculates the sums of adjacent elements and print the highest sum
 ```C
 #include<stdio.h>
