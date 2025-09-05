@@ -828,6 +828,44 @@ int main()
 }
 ```
 
+## 26. Program to calculate the determinant of a 3 x 3 matrix
+```c
+#include<stdio.h>
+int main()
+{
+ int mat[3][3];
+ printf("Enter elements : ");
+ for(int i = 0; i < 3; i++)
+ {
+  for(int j = 0; j < 3; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ int det = mat[0][0] * (mat[1][1] * mat[2][2] - mat[1][2] * mat[2][1]) - mat[0][1] * (mat[1][0] * mat[2][2] - mat[1][2] * mat[2][0]) + mat[0][2] * (mat[1][0] * mat[2][1] - mat[1][1] * mat[2][0]);
+ printf("%d", det);
+}
+```
+
+## 27. 
+```c
+
+```
+
+## 28. 
+```c
+
+```
+
+## 29. 
+```c
+
+```
+
+## 30. 
+```c
+
+```
 ## Program that calculates the sums of adjacent elements and print the highest sum
 ```C
 #include<stdio.h>
