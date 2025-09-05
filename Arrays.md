@@ -669,6 +669,165 @@ int main()
 }
 ```
 
+## 21. Program to find the sum of the right diagonals of a matrix
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ printf("Enter elements : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ int sum = 0;
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = n - i - 1; j>= 0; j--)
+  {
+    sum += mat[i][j];
+    break;
+  }
+ }
+ printf("Sum of right diagonal : %d", sum);
+}
+```
+
+## 22. Program to find the sum of the left diagonals of a matrix
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ printf("Enter elements : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ int sum = 0;
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   if( i == j)
+    sum += mat[i][j];
+  }
+ }
+ printf("Sum of left diagonal : %d", sum);
+}
+```
+
+## 23. Program to find the sum of rows and columns of a matrix
+```c
+#include<stdio.h>
+int main()
+{
+ int n, m;
+ printf("Enter rows and columns : ");
+ scanf("%d %d", &n, &m);
+ int mat[n][m];
+ printf("Enter elements : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ for(int i = 0; i < n ; i++)
+ {
+  int rowsum = 0;
+  for(int j = 0; j < m; j++)
+  {
+   rowsum += mat[i][j];
+  }
+  printf("Sum of row %d : %d\n", i + 1, rowsum);
+ }
+ for(int i = 0; i < m ; i++)
+ {
+  int colsum = 0;
+  for(int j = 0; j < n; j++)
+  {
+   colsum += mat[j][i];
+  }
+  printf("Sum of column %d : %d\n", i + 1, colsum);
+ }
+}
+```
+
+## 24. Program to print or display the lower triangular of a given matrix
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ printf("Enter elements : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ printf("Lower triangular matrix : \n");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j <= i; j++)
+  {
+   printf("%d ", mat[i][j]);
+  }
+  printf("\n");
+ }
+}
+```
+
+## 25. Program to print or display an upper triangular matrix
+```c
+#include<stdio.h>
+int main()
+{
+ int n;
+ printf("Enter size of square matrix : ");
+ scanf("%d", &n);
+ int mat[n][n];
+ printf("Enter elements : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  }
+ }
+ printf("Upper triangular matrix : \n");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < n ; j++)
+  {
+   if(i <= j)
+    printf("%d ", mat[i][j]);
+   else
+    printf("0 ");
+  }
+  printf("\n");
+ }
+}
+```
+
 ## Program that calculates the sums of adjacent elements and print the highest sum
 ```C
 #include<stdio.h>
