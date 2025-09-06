@@ -847,9 +847,45 @@ int main()
 }
 ```
 
-## 27. 
+## 27. Program to accept two matrices and check whether they are equal
 ```c
-
+#include<stdio.h>
+int main()
+{
+ int n, m;
+ printf("Enter rows and columns : ");
+ scanf("%d %d", &n, &m);
+ int mat1[n][m], mat2[n][m];
+ printf("Enter elements of first matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat1[i][j]);
+  }
+ }
+ printf("Enter elements of second matrix : ");
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   scanf("%d", &mat2[i][j]);
+  }
+ }
+ int flag = 1;
+ for(int i = 0; i < n; i++)
+ {
+  for(int j = 0; j < m; j++)
+  {
+   if(mat1[i][j] != mat2[i][j])
+    flag = 0;
+  }
+ }
+ if(flag)
+  printf("Matrices are equal");
+ else
+  printf("Matrices are not equal");
+}
 ```
 
 ## 28. 
