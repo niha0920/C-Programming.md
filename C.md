@@ -121,3 +121,78 @@ int main()
  }
 }
 ```
+
+## 4. Program to check whether the binary form of a number is palindrome or not?
+```c
+#include<stdio.h>
+int isBinaryPalindrome(int num)
+{
+ int original = num;
+ int bit[32], n = 0;
+ while(num > 0)
+ {
+  bit[n++] = num % 2;
+  num /= 2;
+ }
+ for(int i = 0, j = n - 1; i <= j; i++, j--)
+ {
+  if(bit[i] != bit[j])
+   return 0;
+ }
+ return 1;
+}
+int main()
+{
+ int num;
+ printf("Enter a number : ");
+ scanf("%d", &num);
+ int binpal = isBinaryPalindrome(num);
+ if(binpal)
+  printf("%d is palindrome", num);
+ else
+  printf("%d is not palindrome ", num);
+}
+```
+
+## 5. Program to compress words in a file by replacing only consecutive repeated letters with their count, only when there are 2 or more repetitions
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+void compressWord(const char* w, char* compressed) {
+    int len = strlen(w);
+    int i = 0, j = 0;
+    while (i < len) {
+        compressed[j++] = w[i];
+        int count = 1;
+        while (i + 1 < len && w[i] == w[i + 1]) {
+            count++;
+            i++;
+        }
+        if (count > 1) {
+            j += sprintf(&compressed[j], "%d", count);
+        }
+        i++;
+    }
+    compressed[j] = '\0';
+}
+int main() {
+    FILE *inFile = fopen("inputFile.txt", "r");
+    FILE *outFile = fopen("outputFile.txt", "w");
+    if (inFile == NULL || outFile == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+    char w[100];
+    char compressed[200];
+    while (fscanf(inFile, "%s", w) != EOF) {
+        compressWord(w, compressed);
+        fprintf(outFile, "%s ", compressed);
+    }
+    fclose(inFile);
+    fclose(outFile);
+    printf("outputFile.txt\n");
+    return 0;
+}
+```
