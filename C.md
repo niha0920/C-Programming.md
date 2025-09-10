@@ -248,7 +248,7 @@ int main()
    scanf("%d", &mat[i][j]);
   } 
  }
- printf("Spiral Order Traversal:\n");
+ printf("Spiral Order Traversal : ");
  spiralTraversal(r, c, mat);
  return 0;
 }
