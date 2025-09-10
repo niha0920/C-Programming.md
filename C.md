@@ -196,3 +196,60 @@ int main() {
     return 0;
 }
 ```
+
+## 6. Program to perform spiral order traversal of a matrix
+```c
+#include <stdio.h>
+void spiralTraversal(int r, int c, int mat[r][c]) 
+{
+ int top = 0, bottom = r - 1;
+ int left = 0, right = c - 1;
+ while(top <= bottom && left <= right) 
+ {
+  for(int i = left; i <= right; i++)
+  {
+   printf("%d ", mat[top][i]);
+  }
+  top++;
+  for(int i = top; i <= bottom; i++)
+  {
+   printf("%d ", mat[i][right]);
+  }
+  right--;
+  if(top <= bottom) 
+  {
+   for(int i = right; i >= left; i--)
+   {
+    printf("%d ", mat[bottom][i]);
+   }
+   bottom--;
+  }
+  if(left <= right) 
+  {
+   for (int i = bottom; i >= top; i--)
+   {
+    printf("%d ", mat[i][left]);
+   }
+   left++;
+  }
+ }
+}
+int main() 
+{
+ int r, c;
+ printf("Enter row and column number :");
+ scanf("%d %d", &r, &c);
+ int mat[r][c];
+ printf("Enter matrix elements : ");
+ for(int i = 0; i < r; i++)
+ {
+  for(int j = 0; j < c; j++)
+  {
+   scanf("%d", &mat[i][j]);
+  } 
+ }
+ printf("Spiral Order Traversal:\n");
+ spiralTraversal(r, c, mat);
+ return 0;
+}
+```
