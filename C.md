@@ -253,3 +253,36 @@ int main()
  return 0;
 }
 ```
+
+## 7. Program to check if two given strings are anagrams of each other
+```c
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+ char str1[10], str2[10], check;
+ printf("Enter two strings : ");
+ scanf("%s %s", str1, str2);
+ for(int i = 0; str1[i] != '\0'; i++)
+ {
+  check = 0;
+  for(int j = 0; str2[j] != '\0'; j++)
+  {
+   if(str1[i] == str2[j])
+   {
+    check = 1;
+    break;
+   }
+  }
+  if(!check)
+  {
+   printf("Not anagram");
+   return 1;
+  }
+ }
+ if(check)
+  printf("Anagram");
+ else
+  printf("Not anagram");
+}
+```
